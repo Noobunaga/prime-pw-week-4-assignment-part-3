@@ -10,10 +10,11 @@ function addItem(item) {
 
 }
 
-function listItems() {
-  console.log(`You have ${basket.length} in basket`);
-  for (let i = 0; i < basket.length; i += 1){
-  }
+function listItems(name) {
+  console.log(`You have ${basket.length} in basket`)
+    for (let i = 0; i < basket.length; i += 1){
+      console.log(` ${basket[i]}`)
+    }
 
 }
 
@@ -25,5 +26,6 @@ addItem('Fishing pole')
 addItem('Fishing reel')
 addItem('Fishing lure')
 addItem('Fishing line')
+addItem('Fishing net')
 
 listItems()
