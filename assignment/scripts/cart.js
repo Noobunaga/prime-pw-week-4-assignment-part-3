@@ -4,8 +4,10 @@ console.log('***** Cart Functions *****');
 const basket = [];
 
 function addItem(item) {
-  const name = { item: item, qty: 1 }
+  const name = { item: item }
   basket.push(item);
+  console.log(` ${item} was added to basket`);
+  return true
 
 
 }
@@ -15,17 +17,11 @@ function listItems(name) {
     for (let i = 0; i < basket.length; i += 1){
       console.log(` ${basket[i]}`)
     }
-
 }
 
-function empty() {
-
+function empty(basket){
+  while(basket.length > 0){
+    basket.pop();
+    console.log('Basket Emptied!');
+  }
 }
-
-addItem('Fishing pole')
-addItem('Fishing reel')
-addItem('Fishing lure')
-addItem('Fishing line')
-addItem('Fishing net')
-
-listItems()
